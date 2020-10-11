@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+########################################
+# Run command for MariaDB
+# Globals:
+#   MYSQL_ROOT_PASSWORD
+########################################
+docker container run                               \
+  --detach                                         \
+  --env MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD" \
+  --name mariadb                                   \
+  --publish 3306                                   \
+  --restart always                                 \
+  --volume mariadb:/var/lib/mysql                  \
+  mariadb
