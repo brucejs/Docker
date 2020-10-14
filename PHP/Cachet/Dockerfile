@@ -1,5 +1,8 @@
 FROM php:7.1-fpm
 
+# Use the default production configuration
+RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
 # install unzip as persistent dependency. Cachet likes the system one for
 # installation and upgrades.
 RUN set -eux; \
