@@ -18,4 +18,4 @@ Required PHP modules:
 - tokenizer<sup>\*</sup>
 - xml<sup>\*</sup>
 
-\*<sup>already included in php:7.1-fpm</sup>
+<sup>\* already included in php:7.1-fpm</sup>
