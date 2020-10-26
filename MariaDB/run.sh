@@ -12,4 +12,4 @@ docker container run                               \
   --publish 3306                                   \
   --restart always                                 \
   --volume mariadb:/var/lib/mysql                  \
-  mariadb
+  mariadb:10
