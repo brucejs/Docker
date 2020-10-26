@@ -7,9 +7,7 @@ RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 # installation and upgrades.
 RUN set -eux; \
     apt-get update; \
-    apt-get install -y --no-install-recommends \
-      ghostscript \
-      unzip
+    apt-get install -y --no-install-recommends unzip
 
 # install PHP module build dependencies
 RUN set -ex; \
@@ -18,33 +16,26 @@ RUN set -ex; \
     apt-get install -y --no-install-recommends \
       libfreetype6-dev \
       libjpeg-dev \
-      libmagickwand-dev \
       libmcrypt-dev \
       libpng-dev \
       libpq-dev \
-      libzip-dev \
     ; \
 # configure and install modules
-    docker-php-ext-configure gd --with-freetype --with-jpeg; \
+    docker-php-ext-configure gd --with-freetype-dir --with-jpeg-dir; \
     docker-php-ext-install -j "$(nproc)" \
-      bcmath \
-      exif \
       gd \
       mcrypt \
       mysqli \
       pdo_mysql \
       pdo_pgsql \
       pgsql \
-      zip \
     ; \
     pecl install \
       apcu \
-      imagick-3.4.4 \
       redis-5.3.1 \
     ; \
     docker-php-ext-enable \
       apcu \
-      imagick \
       redis \
     ; \
 # remove build dependencies and purge apt lists
