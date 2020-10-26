@@ -23,7 +23,7 @@ done
 if $FQDN; then
   docker container run                     \
     --detach                               \
-    --hostname $(hostname --fqdn)          \
+    --hostname "$(hostname --fqdn)"        \
     --name syncthing                       \
     --publish 22000:22000                  \
     --publish 8384                         \
@@ -34,7 +34,7 @@ if $FQDN; then
 else
   docker container run                     \
     --detach                               \
-    --hostname $(hostname)                 \
+    --hostname "$(hostname)"               \
     --name syncthing                       \
     --publish 22000:22000                  \
     --publish 8384                         \
