@@ -17,6 +17,7 @@ FQDN=false
 while getopts 'f' flag; do
   case "${flag}" in
     f) FQDN=true ;;
+    *) error "Unexpected option ${flag}" ;;
   esac
 done
 
