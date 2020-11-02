@@ -6,6 +6,7 @@
 #   None
 # Depends:
 #   postgres
+#   redis (optional)
 # Notes:
 #   You'll need a front-end proxy to pass requests to this container's
 #   port 9000.
