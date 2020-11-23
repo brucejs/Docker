@@ -1,4 +1,4 @@
-# php-cachet
+# sharkmoji/cachet
 
 Custom PHP image based upon php:7.1-fpm for running [Cachet v2.3.18](https://github.com/CachetHQ/Cachet/tree/v2.3.18).
 
@@ -22,7 +22,7 @@ Custom PHP image based upon php:7.1-fpm for running [Cachet v2.3.18](https://git
 
 ## Installation
 
-1. Prepare your database and start sharkmoji/php-cachet
+1. Prepare your database and start sharkmoji/cachet
 
 2. Download and unpack latest pinned version:
 
@@ -37,13 +37,13 @@ cd Cachet-2.3.18
 4. Copy source files to container:
 
 ```
-sudo docker container cp . php-cachet:/var/www/cachet
+sudo docker container cp . cachet:/var/www/cachet
 ```
 
 5. Drop into container and fix ownership/permissions:
 
 ```
-sudo docker container exec -it php-cachet sh
+sudo docker container exec -it cachet sh
 chown -R www-data:www-data /var/www/cachet
 find /var/www/cachet -type d -exec chmod 775 {} \;
 find /var/www/cachet -type f -exec chmod 664 {} \;

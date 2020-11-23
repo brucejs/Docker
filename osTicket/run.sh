@@ -13,8 +13,8 @@
 docker container run                   \
   --detach                             \
   --link mariadb                       \
-  --name php-osticket                  \
+  --name osticket                      \
   --publish 9000                       \
   --restart always                     \
   --volume cachet:/var/www/osticket:rw \
-  sharkmoji/php-osticket
+  sharkmoji/osticket

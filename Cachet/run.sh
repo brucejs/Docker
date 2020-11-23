@@ -15,9 +15,9 @@ docker container run                        \
   --detach                                  \
   --link postgres                           \
   --link redis                              \
-  --name php-cachet                         \
+  --name cachet                             \
   --publish 9000                            \
   --restart always                          \
   --volume /etc/localtime:/etc/localtime:ro \
   --volume cachet:/var/www/cachet:rw        \
-  sharkmoji/php-cachet
+  sharkmoji/cachet
