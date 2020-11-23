@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 ########################################
-# Run command for php-cachet.
+# Run command for Cachet
 # Globals:
 #   None
 # Depends:
