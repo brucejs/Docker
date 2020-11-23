@@ -4,6 +4,8 @@
 # Run command for MariaDB
 # Globals:
 #   MYSQL_ROOT_PASSWORD
+# Depends:
+#   None
 ########################################
 docker container run                               \
   --detach                                         \
