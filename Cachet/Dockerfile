@@ -1,13 +1,14 @@
 FROM php:7.1-fpm
 
-# Use the default production configuration
+# use the default production configuration
 RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
-# install unzip as persistent dependency. Cachet likes the system one for
-# installation and upgrades.
+# Install unzip as persistent dependency. Cachet likes the system one for
+# installation and upgrades. Install Supervisor for configuring queue.
 RUN set -eux; \
     apt-get update; \
-    apt-get install -y --no-install-recommends unzip
+    apt-get install -y --no-install-recommends supervisor unzip; \
+    mkdir /var/log/supervisord /var/run/supervisord
 
 # install PHP module build dependencies
 RUN set -ex; \
@@ -91,3 +92,9 @@ RUN { \
 # install composer
 RUN curl -sS https://getcomposer.org/installer \
       | php -- --install-dir=/usr/local/bin --filename=composer
+
+# copy over cachet-queue supervisor config
+COPY cachet.conf /
+
+# start supervisord
+CMD ["/usr/bin/supervisord", "-c", "/cachet.conf"]
