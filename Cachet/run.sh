@@ -11,12 +11,13 @@
 #   You'll need a front-end proxy to pass requests to this container's
 #   port 9000.
 ########################################
-docker container run                 \
-  --detach                           \
-  --link postgres                    \
-  --link redis                       \
-  --name php-cachet                  \
-  --publish 9000                     \
-  --restart always                   \
-  --volume cachet:/var/www/cachet:rw \
+docker container run                        \
+  --detach                                  \
+  --link postgres                           \
+  --link redis                              \
+  --name php-cachet                         \
+  --publish 9000                            \
+  --restart always                          \
+  --volume /etc/localtime:/etc/localtime:ro \
+  --volume cachet:/var/www/cachet:rw        \
   sharkmoji/php-cachet
