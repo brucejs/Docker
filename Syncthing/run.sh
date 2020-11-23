@@ -29,6 +29,7 @@ if $FQDN; then
     --publish 22000:22000                  \
     --publish 8384                         \
     --restart always                       \
+    --volume /etc/localtime:/etc/localtime:ro \
     --volume syncthing:/var/syncthing:rw   \
     --volume ~/Sync:/var/syncthing/Sync:rw \
     syncthing/syncthing
@@ -40,6 +41,7 @@ else
     --publish 22000:22000                  \
     --publish 8384                         \
     --restart always                       \
+    --volume /etc/localtime:/etc/localtime:ro \
     --volume syncthing:/var/syncthing:rw   \
     --volume ~/Sync:/var/syncthing/Sync:rw \
     syncthing/syncthing
