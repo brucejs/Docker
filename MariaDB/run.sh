@@ -9,7 +9,7 @@
 ########################################
 HOST=false
 
-while getopts 'f' flag; do
+while getopts 'h' flag; do
   case "${flag}" in
     h) HOST=true ;;
     *) error "Unexpected option ${flag}" ;;
