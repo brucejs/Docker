@@ -12,5 +12,5 @@ docker container run                               \
   --publish 3306                                   \
   --restart always                                 \
   --volume /etc/localtime:ro                       \
-  --volume mariadb:/var/lib/mysql                  \
+  --volume mariadb:/var/lib/mysql:rw               \
   mariadb:10
