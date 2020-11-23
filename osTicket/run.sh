@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 ########################################
-# Run command for osTicket.
+# Run command for osTicket
 # Globals:
 #   None
 # Depends:
