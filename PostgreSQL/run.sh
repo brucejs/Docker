@@ -4,6 +4,8 @@
 # Run command for PostgreSQL
 # Globals:
 #   POSTGRES_PASSWORD
+# Depends:
+#   None
 ########################################
 docker container run                           \
   --detach                                     \
