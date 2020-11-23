@@ -1,4 +1,4 @@
-# php-wallabag
+# sharkmoji/wallabag
 
 Custom PHP image based upon [php:7.3-fpm](https://hub.docker.com/_/php) for running [Wallabag v2.3.8](https://github.com/wallabag/wallabag/tree/2.3.8).
 
