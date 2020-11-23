@@ -7,11 +7,11 @@
 # Depends:
 #   None
 ########################################
-docker container run \
-  --detach \
-  --name tiddlywiki \
-  --publish 8080 \
-  --restart always \
+docker container run                        \
+  --detach                                  \
+  --name tiddlywiki                         \
+  --publish 8080                            \
+  --restart always                          \
   --volume /etc/localtime:/etc/localtime:ro \
-  --volume tiddlywiki:/wiki:rw \
+  --volume tiddlywiki:/wiki:rw              \
   sharkmoji/tiddlywiki
