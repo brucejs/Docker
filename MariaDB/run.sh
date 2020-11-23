@@ -23,7 +23,7 @@ if $HOST; then
     --name mariadb                                   \
     --publish 3306:3306                              \
     --restart always                                 \
-    --volume /etc/localtime:ro                       \
+    --volume /etc/localtime:/etc/localtime:ro        \
     --volume mariadb:/var/lib/mysql:rw               \
     mariadb:10
 else 
@@ -33,7 +33,7 @@ else
     --name mariadb                                   \
     --publish 3306                                   \
     --restart always                                 \
-    --volume /etc/localtime:ro                       \
+    --volume /etc/localtime:/etc/localtime:ro        \
     --volume mariadb:/var/lib/mysql:rw               \
     mariadb:10
 fi
