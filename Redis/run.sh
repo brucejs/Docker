@@ -12,5 +12,6 @@ docker container run      \
   --name redis            \
   --publish 6379          \
   --restart always        \
+  --volume /etc/localtime:/etc/localtime:ro \
   --volume redis:/data:rw \
   redis:6 redis-server --requirepass "$REDIS_HOST_PASSWORD"
