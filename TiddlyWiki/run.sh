@@ -1,7 +1,7 @@
 #! /bin/bash
 #
 ########################################
-# Run command for tiddlywiki
+# Run command for TiddlyWiki
 # Globals:
 #   None
 # Depends:
