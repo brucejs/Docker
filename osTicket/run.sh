@@ -16,5 +16,5 @@ docker container run                   \
   --name osticket                      \
   --publish 9000                       \
   --restart always                     \
-  --volume cachet:/var/www/osticket:rw \
+  --volume osticket:/var/www/osticket:rw \
   sharkmoji/osticket
