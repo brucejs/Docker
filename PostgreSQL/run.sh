@@ -14,5 +14,5 @@ docker container run                           \
   --publish 5432                               \
   --restart always                             \
   --volume /etc/localtime:/etc/localtime:ro    \
-  --volume postgres:/var/lib/postgresql/data   \
+  --volume postgres:/var/lib/postgresql/data:rw \
   postgres:12
