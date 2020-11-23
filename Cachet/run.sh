@@ -14,6 +14,7 @@
 docker container run                 \
   --detach                           \
   --link postgres                    \
+  --link redis                       \
   --name php-cachet                  \
   --publish 9000                     \
   --restart always                   \
