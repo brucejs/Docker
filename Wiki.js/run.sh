@@ -21,4 +21,4 @@ docker container run                        \
   --restart always                          \
   --volume /etc/localtime:/etc/localtime:ro \
   --volume wiki:/wiki/data/content:rw       \
-  requarks/wiki
+  requarks/wiki:2
