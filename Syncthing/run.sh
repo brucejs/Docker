@@ -22,27 +22,27 @@ while getopts 'f' flag; do
 done
 
 if $FQDN; then
-  docker container run                     \
-    --detach                               \
-    --hostname "$(hostname --fqdn)"        \
-    --name syncthing                       \
-    --publish 22000:22000                  \
-    --publish 8384                         \
-    --restart always                       \
+  docker container run                        \
+    --detach                                  \
+    --hostname "$(hostname --fqdn)"           \
+    --name syncthing                          \
+    --publish 22000:22000                     \
+    --publish 8384                            \
+    --restart always                          \
     --volume /etc/localtime:/etc/localtime:ro \
-    --volume syncthing:/var/syncthing:rw   \
-    --volume ~/Sync:/var/syncthing/Sync:rw \
+    --volume syncthing:/var/syncthing:rw      \
+    --volume ~/Sync:/var/syncthing/Sync:rw    \
     syncthing/syncthing
 else
-  docker container run                     \
-    --detach                               \
-    --hostname "$(hostname)"               \
-    --name syncthing                       \
-    --publish 22000:22000                  \
-    --publish 8384                         \
-    --restart always                       \
+  docker container run                        \
+    --detach                                  \
+    --hostname "$(hostname)"                  \
+    --name syncthing                          \
+    --publish 22000:22000                     \
+    --publish 8384                            \
+    --restart always                          \
     --volume /etc/localtime:/etc/localtime:ro \
-    --volume syncthing:/var/syncthing:rw   \
-    --volume ~/Sync:/var/syncthing/Sync:rw \
+    --volume syncthing:/var/syncthing:rw      \
+    --volume ~/Sync:/var/syncthing/Sync:rw    \
     syncthing/syncthing
 fi
