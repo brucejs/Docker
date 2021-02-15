@@ -21,4 +21,4 @@ docker container run                        \
   --restart always                          \
   --volume /etc/localtime:/etc/localtime:ro \
   --volume wallabag:/var/www/wallabag:rw    \
-  sharkmoji/wallabag
+  brucejs/wallabag

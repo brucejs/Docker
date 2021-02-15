@@ -18,4 +18,4 @@ docker container run                        \
   --restart always                          \
   --volume /etc/localtime:/etc/localtime:ro \
   --volume osticket:/var/www/osticket:rw    \
-  sharkmoji/osticket
+  brucejs/osticket

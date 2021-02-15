@@ -1,4 +1,4 @@
-# sharkmoji/cachet
+# brucejs/cachet
 
 Custom PHP image based upon php:7.1-fpm for running [Cachet v2.3.18](https://github.com/CachetHQ/Cachet/tree/v2.3.18).
 
@@ -22,7 +22,7 @@ Custom PHP image based upon php:7.1-fpm for running [Cachet v2.3.18](https://git
 
 ## Installation
 
-1. Prepare your database and start sharkmoji/cachet
+1. Prepare your database and start brucejs/cachet
 
 2. Download and unpack latest pinned version:
 

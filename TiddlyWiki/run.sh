@@ -14,4 +14,4 @@ docker container run                        \
   --restart always                          \
   --volume /etc/localtime:/etc/localtime:ro \
   --volume tiddlywiki:/wiki:rw              \
-  sharkmoji/tiddlywiki
+  brucejs/tiddlywiki

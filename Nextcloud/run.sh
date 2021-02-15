@@ -24,4 +24,4 @@ docker container run                               \
   --volume /etc/localtime:/etc/localtime:ro        \
   --volume /mnt/Nextcloud:/var/www/html/data:rw    \
   --volume nextcloud:/var/www/html:rw              \
-  sharkmoji/nextcloud
+  brucejs/nextcloud

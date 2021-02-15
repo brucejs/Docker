@@ -20,4 +20,4 @@ docker container run                        \
   --restart always                          \
   --volume /etc/localtime:/etc/localtime:ro \
   --volume cachet:/var/www/cachet:rw        \
-  sharkmoji/cachet
+  brucejs/cachet
