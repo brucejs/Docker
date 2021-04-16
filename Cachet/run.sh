@@ -19,5 +19,5 @@ docker container run                        \
   --publish 9000                            \
   --restart always                          \
   --volume /etc/localtime:/etc/localtime:ro \
-  --volume cachet:/var/www/cachet:rw        \
+  --volume /var/www/cachet:/var/www/cachet:rw \
   brucejs/cachet
